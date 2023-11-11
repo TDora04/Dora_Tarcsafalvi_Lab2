@@ -8,12 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using Dora_Tarcsafalvi_Lab2.Data;
 using Dora_Tarcsafalvi_Lab2.Models;
 
-namespace Dora_Tarcsafalvi_Lab2.Pages.Publisher
+namespace Dora_Tarcsafalvi_Lab2.Pages.Publishers
 {
     public class IndexModel : PageModel
     {
         private readonly Dora_Tarcsafalvi_Lab2.Data.Dora_Tarcsafalvi_Lab2Context _context;
-        private readonly object await_context;
 
         public IndexModel(Dora_Tarcsafalvi_Lab2.Data.Dora_Tarcsafalvi_Lab2Context context)
         {

@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Dora_Tarcsafalvi_Lab2.Data;
 using Dora_Tarcsafalvi_Lab2.Models;
 
-namespace Dora_Tarcsafalvi_Lab2.Pages.Books
+namespace Dora_Tarcsafalvi_Lab2.Pages.Authors
 {
     public class CreateModel : PageModel
     {
@@ -21,29 +21,22 @@ namespace Dora_Tarcsafalvi_Lab2.Pages.Books
 
         public IActionResult OnGet()
         {
-            var authorlist = _context.Author.Select(x => new
-            {
-                x.ID,
-                FullName = x.LastName + " " + x.FirstName
-            });
-            ViewData["AuthorID"] = new SelectList(authorlist, "ID", "FullName");
-            ViewData["PublisherID"] = new SelectList(_context.Set<Publisher>(), "ID", "PublisherName");
             return Page();
         }
 
         [BindProperty]
-        public Book Book { get; set; } = default!;
+        public Author Author { get; set; } = default!;
         
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-          if (!ModelState.IsValid || _context.Book == null || Book == null)
+          if (!ModelState.IsValid || _context.Author == null || Author == null)
             {
                 return Page();
             }
 
-            _context.Book.Add(Book);
+            _context.Author.Add(Author);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

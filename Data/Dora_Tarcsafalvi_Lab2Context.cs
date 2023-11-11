@@ -17,5 +17,7 @@ namespace Dora_Tarcsafalvi_Lab2.Data
         public DbSet<Dora_Tarcsafalvi_Lab2.Models.Book> Book { get; set; } = default!;
 
         public DbSet<Dora_Tarcsafalvi_Lab2.Models.Publisher>? Publisher { get; set; }
+
+        public DbSet<Dora_Tarcsafalvi_Lab2.Models.Author>? Author { get; set; }
     }
 }

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Dora_Tarcsafalvi_Lab2.Data;
 using Dora_Tarcsafalvi_Lab2.Models;
 
-namespace Dora_Tarcsafalvi_Lab2.Pages.Publisher
+namespace Dora_Tarcsafalvi_Lab2.Pages.Publishers
 {
     public class DetailsModel : PageModel
     {
